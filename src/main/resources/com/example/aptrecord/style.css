@@ -1,0 +1,49 @@
+/* CSS rule for applying a shadow effect to Panes */
+.shadow-pane {
+    -fx-background-radius: 1em;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.0, 5, 5);
+}
+
+/* CSS rule for applying a linear gradient background */
+.background {
+    -fx-background-color: linear-gradient(
+        from 0.0% 0.0% to 100.0% 100.0%,
+        reflect,
+        #000000ff 0.0%,
+        #000000ff 24.283%,
+        #e4d3d3ff 60.265%,
+        #e4d3d3ff 100.0%
+    );
+}
+
+
+/* Base styles for the button */
+.button-plain {
+    -fx-background-color: transparent; /* Removes the background */
+    -fx-border-color: transparent;     /* Removes any borders */
+    -fx-text-fill: white;             /* Text color, change to match your desired text color */
+    -fx-font-family: "Rockwell";      /* Optional: Set font style if needed */
+    -fx-font-size: 18px;             /* Optional: Set the font size */
+    -fx-padding: 0;                  /* Adjust padding to remove default padding */
+}
+
+/* Base styles for the button */
+.button-plainn {
+    -fx-background-color: transparent; /* Removes the background */
+    -fx-border-color: black;
+    -fx-text-fill: black;             /* Text color, change to match your desired text color */
+    -fx-font-family: "Rockwell";      /* Optional: Set font style if needed */
+    -fx-font-size: 18px;             /* Optional: Set the font size */
+    -fx-padding: 0;                  /* Adjust padding to remove default padding */
+}
+
+/* Optional: Hover effect */
+.button-plain:hover {
+    -fx-text-fill: #cce7ff; /* Change the color when hovered */
+    -fx-cursor: hand;      /* Change cursor to indicate interactivity */
+}
+
+.image-view {
+    -fx-background-radius: 1em;
+    -fx-clip-radius: 1em; /* To ensure the image is clipped to the rounded corner */
+}

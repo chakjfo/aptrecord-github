@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="627.0" prefWidth="964.0" style="-fx-background-color: #D8DEE8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aptrecord.Controller.adminPayment">
+   <children>
+      <TabPane layoutX="147.0" layoutY="-29.0" prefHeight="656.0" prefWidth="818.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="627.0" prefWidth="816.0" style="-fx-background-color: #D8DEE8;">
+                     <children>
+                        <Label layoutX="85.0" layoutY="11.0" text="Hello,">
+                           <font>
+                              <Font name="Rockwell Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="30.0" layoutY="70.0" prefHeight="226.0" prefWidth="792.0" style="-fx-background-color: #ffffff; -fx-background-radius: 2em;">
+                           <children>
+                              <Label layoutX="573.0" layoutY="33.0" opacity="0.8" text="Total Payment">
+                                 <font>
+                                    <Font name="Rockwell Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="565.0" layoutY="141.0" text="Water" textFill="#727272">
+                                 <font>
+                                    <Font name="Rockwell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="669.0" layoutY="141.0" text="Electricity" textFill="#727272">
+                                 <font>
+                                    <Font name="Rockwell Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="electricitypayment" layoutX="669.0" layoutY="166.0" text="\$000000">
+                                 <font>
+                                    <Font name="Rockwell" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="waterpayment" layoutX="565.0" layoutY="166.0" text="\$000000">
+                                 <font>
+                                    <Font name="Rockwell" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalpayment" layoutX="572.0" layoutY="71.0" text="\$000000" textFill="#2b44c3">
+                                 <font>
+                                    <Font name="Rockwell Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="530.0" layoutY="16.0" orientation="VERTICAL" prefHeight="177.0" prefWidth="0.0" />
+                              <Pane layoutX="22.0" layoutY="11.0" prefHeight="201.0" prefWidth="488.0" style="-fx-background-color: #336699; -fx-background-radius: 1.5em;">
+                                 <children>
+                                    <LineChart fx:id="waterchart" blendMode="COLOR_BURN" layoutX="14.0" layoutY="14.0" prefHeight="177.0" prefWidth="224.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <LineChart fx:id="electricitychart" blendMode="COLOR_BURN" layoutX="238.0" layoutY="16.0" prefHeight="177.0" prefWidth="224.0">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="530.0" layoutY="262.0" prefHeight="271.0" prefWidth="205.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="2.0" text="History">
+                                       <font>
+                                          <Font name="Rockwell Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Hyperlink layoutX="148.0" layoutY="2.0" text="View all">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Separator layoutX="-23.0" layoutY="5.0" orientation="VERTICAL" prefHeight="265.0" prefWidth="6.0" />
+                                    <Pane fx:id="historypane" layoutX="3.0" layoutY="38.0" prefHeight="226.0" prefWidth="200.0" style="-fx-background-color: #D8DEE8; -fx-border-color: #000000;" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Label fx:id="firstname" layoutX="210.0" layoutY="11.0" prefHeight="49.0" prefWidth="139.0" text="........">
+                           <font>
+                              <Font name="Rockwell Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL" prefHeight="265.0" prefWidth="6.0" />
+                        <ImageView blendMode="MULTIPLY" fitHeight="270.0" fitWidth="510.0" layoutX="54.0" layoutY="332.0" style="-fx-preserve-ratio: true; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.0, 5, 5);">
+                           <image>
+                              <Image url="@images/floorplan.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="576.0" layoutY="19.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="154.0" style="-fx-background-radius: 2em;" styleClass="button-plainn" stylesheets="@style.css" text="Log Out">
+                           <font>
+                              <Font name="Rockwell" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2" />
+        </tabs>
+      </TabPane>
+      <Pane layoutX="-4.0" layoutY="7.0" prefHeight="619.0" prefWidth="187.0" style="-fx-background-color: #003366; -fx-background-radius: 2em;" styleClass="shadow-pane" stylesheets="@style.css">
+         <children>
+            <Label layoutX="40.0" layoutY="131.0" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="26.0" text="Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="43.0" text="Number" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="roomnumber" alignment="CENTER" layoutX="108.0" layoutY="16.0" prefHeight="62.0" prefWidth="52.0" text="?" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell Bold Italic" size="50.0" />
+               </font>
+            </Label>
+            <Button fx:id="settingbtn" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" stylesheets="@style.css" text="Setting">
+               <styleClass>
+                  <String fx:value="button-plain" />
+                  <String fx:value="shadow-pane" />
+               </styleClass>
+            </Button>
+            <Button fx:id="homebtn" layoutX="16.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" stylesheets="@style.css" text="Home">
+               <styleClass>
+                  <String fx:value="button-plain" />
+                  <String fx:value="shadow-pane" />
+               </styleClass>
+            </Button>
+            <Button fx:id="historybtn" layoutX="15.0" layoutY="219.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" stylesheets="@style.css" text="History">
+               <styleClass>
+                  <String fx:value="button-plain" />
+                  <String fx:value="shadow-pane" />
+               </styleClass>
+            </Button>
+            <Button fx:id="paybtn" layoutX="16.0" layoutY="257.0" mnemonicParsing="false" onAction="#setPaybtn" prefHeight="25.0" prefWidth="171.0" stylesheets="@style.css" text="Pay Here">
+               <styleClass>
+                  <String fx:value="button-plain" />
+                  <String fx:value="shadow-pane" />
+               </styleClass>
+            </Button>
+            <Button fx:id="contactusbtn" layoutX="15.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" stylesheets="@style.css" text="Contact Us">
+               <styleClass>
+                  <String fx:value="button-plain" />
+                  <String fx:value="shadow-pane" />
+               </styleClass>
+            </Button>
+            <Button fx:id="aboutusbtn" layoutX="15.0" layoutY="374.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" stylesheets="@style.css" text="About Us">
+               <styleClass>
+                  <String fx:value="button-plain" />
+                  <String fx:value="shadow-pane" />
+               </styleClass>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
